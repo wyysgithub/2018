@@ -1,0 +1,734 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+section{
+    padding: 80px 0;
+}
+body{
+    position: relative;
+}
+img{
+    display: block;
+    vertical-align: middle;
+    max-width: 100%;
+}
+h1{
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: #5D4037;
+}
+.space{
+    padding: 20px 0;
+}
+.wyy-none{
+    display: none;
+}
+.wyy-have{
+    display: block;
+}
+.firlter li{
+    float: none;
+    display: inline-block;
+}
+.small-en{
+    line-height: 1px;
+    text-align: center;
+    color: #BDBDBD;
+    font-size: 20px;
+}
+
+/* ************************************************************************************************************** */
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* ********************************************************************************************************** */
+
+
+/* 头部样式 */
+header{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    color:#BDBDBD;
+    background-color: rgba(93,64,55,.5); 
+    padding: 20px 0;
+    transition:all 1s ease-in-out;
+    z-index: 10;
+}
+.navbar-default{
+    background-color: transparent;
+    border-style: none;
+}
+.navbar-default .navbar-nav>li>a{
+    color:#BDBDBD;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color:#FFF;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav>li.active>a{
+    color:#FFF;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav>li.active>a:hover{
+    color:#FFF;
+    background-color: transparent;
+}
+.logo{
+    transition:all 1s ease-in-out;
+}
+.logo img{
+    width: 60px;
+}
+
+.flexed-header-on header{
+    padding:0;
+    height:60px;
+    background-color: rgba(0,0,0,.7); 
+}
+.flexed-header-on .logo{
+    transform: scale(0.5);
+}
+
+
+/* 主要页面 */
+.index{
+    height: 700px;
+}
+.index h1{
+    color: #FFF;
+}
+.index p{
+    color: #D7CCC8;
+}
+.index::after{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.4);
+    content: '';
+}
+.index>.caption{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    z-index: 1;
+}
+.wyy-btn{
+    width: 100px;
+    transition: .5s all ease;
+}
+.wyy-btn:hover{
+    background-color: #795548;
+    color: #FFF;
+}
+
+/* 基本信息 */
+.about{
+    background-color: #795548;
+    color: #FFF;  
+    line-height: 2;
+    padding: 10px 0;
+}
+.about>.container>h1{
+    color: #FFF;
+}
+.about h3{
+    letter-spacing: 2px;
+    color: #FFF;
+    line-height: 2;
+}
+.about p{
+    font-size: 16px;
+    color: #BDBDBD;
+}
+.download{
+    margin-top: 30px;
+    width: 200px;
+    background-color: transparent;
+    border: 2px solid #FFF;
+    color: #FFF;
+    transition: 1s all ease;
+}
+.download:hover{
+    background-color: #FFF;
+    color: #795548;
+    font-weight: 600;
+}
+/* 折叠面板 
+.panel-default>.panel-heading{
+    padding: 0;
+}
+.panel-default>.panel-heading a.collapsed{
+    background-color: #000;
+}
+.panel-default>.panel-heading a:hover{
+    background-color: #F00;
+}
+.panel-default>.panel-heading a{
+    position: relative;
+    padding: 12px 15px;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    background-color: #F00;
+    color: #FFF;
+}
+.panel-default>.panel-heading a::after{
+    font-family:"glyphicon" ;
+    content: '\e008';
+    position: absolute;
+    right: 15px;
+    font-size: 14px;
+}
+*/
+/* 工作经历 */
+.work-exp .media-body{
+    padding-top: 30px;
+}
+.work-exp h2{
+    font-weight: 600;
+}
+.work-left{
+    border-right: 2px solid #795548;
+    color: #5D4037;
+}
+.work-right{
+    border-left: 2px solid #795548;
+    color: #5D4037;
+}
+.media i{
+    color: #795548;
+    font-size: 20px;
+}
+.work-en,.work-en i{
+    display: none;
+    color: #757575;
+     line-height: 2;
+}
+.work-ch{
+    margin-top: 40px;
+    font-size: 16px;
+    line-height: 3;
+}
+
+
+
+/* 技能展示 */
+.skill{
+    background: url(../img/skills.jpg) no-repeat top center;
+    background-size: cover;
+}
+.skill-div ul{
+    list-style: none;
+    width: 100%;
+    margin: 0 auto;
+}
+.skill-div ul>li{
+    margin-bottom: 40px;    
+}
+.skill-title{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+    color: #464646;
+    font-weight: 300;    
+}
+.barfiller{
+    width: 100%;
+    height: 12px;
+    border: 1px solid #0f5daa;
+    position: relative;
+}
+.fill {
+    background-color: #0f5daa;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 100%;
+    font-weight: 300;
+    transition: 1s all ease;
+}
+
+
+/* 项目经验 */
+.project-exp{
+    background-color: #f8f8f8;
+}
+.project-exp .row>div{
+    margin-top: 20px;
+}
+.over-container{
+    position: relative;
+}
+.over-a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    background-color: rgba(93,64,55,.7);
+    transform: scale(.8);
+    transition: all .2s ease-in-out;
+    opacity: 0;
+}
+.over-a i{
+    position: absolute;
+    left: 48%;
+    top: 48%;
+    font-size: 18px;
+    color: #FFF;
+}
+.over-a span{
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    font-size: 13px;
+    color: #FFF;
+    text-align: center;
+}
+.over-container:hover .over-a{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.project-exp .nav a{
+    font-size: 20px;
+    font-weight: 300;
+    color: #000;
+}
+.project-exp .nav a:hover{
+    color: #FFF;
+    background-color: #795548;
+}
+.project-exp .nav li.active>a{
+    color: #FFF;
+    background-color: #5D4037;
+}
+.modal-header{
+    background-color: #795548;
+    color: #FFF;
+}
+.modal-header a:hover{
+    color: #FFF;
+}
+.modal-footer .btn{
+    background-color: #795548;
+    color: #FFF;
+}
+
+
+
+/* 访问github */
+.happy{
+    background-color: #5D4037; 
+    padding: 70px 0;
+    cursor: pointer;
+    transition: 1s all ease;
+
+}
+.happy:hover{
+    background-color: #000;
+}
+.happy h1{
+    color: #FFF;
+    font-size: 35px;
+}
+.happy i{
+    position: relative;
+    top: 10px;
+}
+
+
+/* 认证 */
+.renzheng{
+    position: relative;
+    background: url(../img/b4.jpg) no-repeat top center;
+    background-size: cover;
+    color: #FFF;
+}
+.renzheng::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background-color: rgba(0,0,0,.3);
+}
+.renzheng .renzheng-1{
+    position: relative;
+    z-index: 1;
+}
+.renzheng .media-left{
+    display: block;
+    float: left;
+    width: 20px;
+    line-height: 200%;
+    padding:0;
+}
+
+blockquote{
+    border: none;
+    padding-left: 0;
+}
+blockquote footer{
+    color:#ccc;
+}
+
+
+.ad{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding:20px 0;
+    background-color: rgba(196,20,255,.4);
+}
+
+
+
+
+/* lianxi */
+.contact ul{
+    list-style: none;
+    padding: 0;
+}
+.contact-link li{
+    float: left;
+    font-size: 40px;
+    margin:20px;
+}
+.contact-link li a{
+    color: #795548;
+    transition: .3s all ease;
+}
+.contact-link li:nth-child(1) a:hover{
+    color: #000;
+}
+.contact-link li:nth-child(2) a:hover{
+    color: #FF4507;
+}
+.contact-link li:nth-child(3) a:hover{
+    color: #f9da42;
+}
+.contact-link li:nth-child(4) a:hover{
+    color: #00aadd;
+}
+.contact-link li:nth-child(5) a:hover{
+    color: #3b5998;
+}
+.contact-link li:nth-child(6) a:hover{
+    color: #05d100;
+}
+.contact-attr{
+    font-size: 20px;
+    margin:10px 20px;
+}
+.contact-attr li{
+    padding-top: 20px;
+}
+
+footer{
+    background-color: #5D4037;
+    color: #BDBDBD;
+}
+footer p{
+    color: #ccc;
+    margin:0;
+    padding: 10px;
+}
+footer p a{
+    color: #ccc;
+}
+footer p a:hover{
+    color: #FFF;
+}
